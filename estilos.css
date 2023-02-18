@@ -1,0 +1,27 @@
+body {
+/*Aplicar estilos predeterminado a todo*/
+font-family: Arial, Helvetica, sans-serif;
+font-style: oblique;
+background-color: purple;
+
+}
+
+button {
+/*Aplicar estilos a varios componentes*/
+display: block;
+margin-top: 10px;
+background-color:navy;
+padding: 15px;
+color: white;
+border-radius: 15px;
+display:flex;
+
+}
+
+.container {
+/*Aplicar estilos por clase*/
+width: 150px;
+margin: 0 auto;
+text-align: center;
+}
+
