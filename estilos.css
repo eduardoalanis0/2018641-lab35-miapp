@@ -1,0 +1,42 @@
+
+body {
+/*Aplicar estilos predeterminado a todo*/
+font-family: Arial, Helvetica, sans-serif;
+font-style: oblique;
+background-color:antiquewhite;
+
+}
+
+button {
+/*Aplicar estilos a varios componentes*/
+display: block;
+margin-top: 10px;
+background-color:red;
+padding: 15px;
+color: white;
+border-radius: 15px;
+display:flex;
+
+}
+
+.practica3{
+    display:flex;
+    padding: auto;
+}
+
+.container {
+/*Aplicar estilos por clase*/
+width: 150px;
+margin: 0 auto;
+text-align: center;
+}
+
+.botones{
+    width: 20%;
+    border: 0;
+    border-radius: 5px;
+}
+
+.botones button {
+    width: 100%;
+}
