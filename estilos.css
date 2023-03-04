@@ -40,3 +40,9 @@ text-align: center;
 .botones button {
     width: 100%;
 }
+
+ion-input{
+    border: solid 1px lightgray;
+    background-color:antiquewhite;
+}
+

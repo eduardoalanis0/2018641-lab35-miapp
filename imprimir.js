@@ -51,3 +51,25 @@ function imprimir(){
 function limpiar(){
     campoTexto.value=" ";
 }
+
+let gastoTXT = document.getElementById("gasto");
+let montoTXT = document.getElementById("monto");
+let arreglo = document.getElementById("mostrarArreglo");
+
+let gastos = [];
+
+function guardar(){
+    let nuevoGasto = gastoTXT.value + ": $" + montoTXT.value;
+    gastos.push(nuevoGasto);
+
+    console.log(gastos)
+    
+    mostrarArreglo.innerHTML = gastos;
+
+    limpiar2();
+}
+
+function limpiar2(){
+    gastoTXT.value=" ";
+    montoTXT.value=" ";
+}

@@ -5,6 +5,10 @@
 <title>Práctica 1 EAR</title>
 <link rel="stylesheet" href="estilos.css">
 
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
 </head>
 
 <body>
@@ -42,6 +46,41 @@
    <br>
     <p id="mensaje"></p>
 
+</div>
+
+<h1>Práctica 4. Gastos ionic</h1>
+<div>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Presupuesto</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+            <div class="fila">
+                <ion-label for="gasto">Tipo de gasto</ion-label>
+                <ion-input type="text" id="gasto"></ion-input>
+            </div>
+
+            <div class="fila">
+                <ion-label>Monto</ion-label>
+                <ion-input type="text" id="monto"></ion-input>
+            </div>
+
+            <div class="fila">
+                <ion-button onclick="guardar()">Guardar</ion-button>
+            </div>
+ 
+
+            <ion-list>
+                <ion-item>
+                   <ion-label id="mostrarArreglo"></ion-label>
+                </ion-item>
+            </ion-list>
+
+        </ion-content>
+    </ion-app>
 </div>
 
 </body>
