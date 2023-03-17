@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> dfc9db9dfdb94ba4721f65dcc7fb1adb842741f9
 //Archivo de Javascript
 
 var campoTexto = document.getElementById("campoTexto");
@@ -39,11 +35,7 @@ function registro(){
 function limpiar(){
     usuarioTXT.value = "";
     passwordTXT.value ="";
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> dfc9db9dfdb94ba4721f65dcc7fb1adb842741f9
+
 //Archivo de Javascript
 
 var campoTexto = document.getElementById("campoTexto");
@@ -58,10 +50,9 @@ function imprimir(){
 //Función limpiar valor del Campo de Texto
 function limpiar(){
     campoTexto.value=" ";
-<<<<<<< HEAD
->>>>>>> daacd9a817c3965ee8a6b222ae2a9c7d7a007977
+
 }
-=======
+
 }
 
 let gastoTXT = document.getElementById("gasto");
@@ -85,4 +76,4 @@ function limpiar2(){
     gastoTXT.value=" ";
     montoTXT.value=" ";
 }
->>>>>>> dfc9db9dfdb94ba4721f65dcc7fb1adb842741f9
+
