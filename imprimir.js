@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Archivo de Javascript
 
 var campoTexto = document.getElementById("campoTexto");
@@ -34,4 +35,20 @@ function registro(){
 function limpiar(){
     usuarioTXT.value = "";
     passwordTXT.value ="";
+=======
+//Archivo de Javascript
+
+var campoTexto = document.getElementById("campoTexto");
+
+console.log(campoTexto);
+
+
+function imprimir(){
+    console.log(campoTexto.value);
+}
+
+//Función limpiar valor del Campo de Texto
+function limpiar(){
+    campoTexto.value=" ";
+>>>>>>> daacd9a817c3965ee8a6b222ae2a9c7d7a007977
 }
