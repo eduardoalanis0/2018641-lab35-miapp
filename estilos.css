@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> dfc9db9dfdb94ba4721f65dcc7fb1adb842741f9
 body {
 /*Aplicar estilos predeterminado a todo*/
 font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +45,7 @@ text-align: center;
     width: 100%;
 }
 
+<<<<<<< HEAD
 =======
 body {
 /*Aplicar estilos predeterminado a todo*/
@@ -70,3 +75,10 @@ text-align: center;
 }
 
 >>>>>>> daacd9a817c3965ee8a6b222ae2a9c7d7a007977
+=======
+ion-input{
+    border: solid 1px lightgray;
+    background-color:antiquewhite;
+}
+
+>>>>>>> dfc9db9dfdb94ba4721f65dcc7fb1adb842741f9
