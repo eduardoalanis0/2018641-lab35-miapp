@@ -1,13 +1,17 @@
 <p>Hola, {{nombre}}</p>
 
 <ion-list>
-    <ion-item-sliding *ngFor="let alumno of alumnos">
+    <ion-item-sliding *ngFor="let alumno of alumnos" id="sliding_{{alumno}}">
+        <ion-item-options side="start">
+            <ion-item-option>Archivar <ion-icon name="archive-outline"></ion-icon></ion-item-option>
+        </ion-item-options>
+       
         <ion-item>
             <ion-label>Alumno:  {{alumno}}</ion-label>
         </ion-item>
         <ion-item-options>
-            <ion-item-option>Favorite</ion-item-option>
-            <ion-item-option color="danger">Delete</ion-item-option>
+            <ion-item-option>Agregar a favoritos <ion-icon name="star"></ion-icon></ion-item-option>
+            <ion-item-option color="danger" (click)="presentarActionSheet(alumno)">Eliminar <ion-icon name="trash"></ion-icon></ion-item-option>
         </ion-item-options>
     </ion-item-sliding>
 </ion-list>
