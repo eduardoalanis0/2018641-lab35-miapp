@@ -8,12 +8,16 @@ import { IonicModule } from '@ionic/angular';
 import { ProductosComponent } from './productos/productos.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { BuscarComponent } from './buscar/buscar.component';
+import { VistaProductoComponent } from './vista-producto/vista-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaAlumnosComponent,
-    ProductosComponent
+    ProductosComponent,
+    BuscarComponent,
+    VistaProductoComponent
   ],
   imports: [
     BrowserModule,
