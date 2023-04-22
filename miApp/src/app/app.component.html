@@ -1,3 +1,29 @@
-<h1>Hola mundo!</h1>
+<ion-app>
 
-<app-lista-alumnos></app-lista-alumnos>
+    <ion-header>
+        <ion-toolbar>
+          <ion-title>Mi App de productos</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+
+    <ion-content>
+
+        <app-productos></app-productos>
+        <router-outlet></router-outlet>
+
+       <ion-tabs>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="play-circle"></ion-icon>
+      Productos
+    </ion-tab-button>
+    <ion-tab-button tab="radio">
+      <ion-icon name="radio"></ion-icon>
+      Buscar
+  </ion-tab-bar>
+</ion-tabs>
+        </ion-content>
+</ion-app>
