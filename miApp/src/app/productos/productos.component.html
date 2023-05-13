@@ -1,13 +1,14 @@
+<ion-content>
 <ion-list> 
     <ion-item>
-        <ion-select aria-label="Categoria" interface="popover" placeholder="Select fruit"> 
-            <ion-select-option value="{{categoria}}" *ngFor="let categoria of categorias" (ionChange)="filtrarProductoCategorias">{{categoria}}</ion-select-option> 
+        <ion-select aria-label="Categoria" interface="popover" placeholder="Seleccionar categoria"> 
+            <ion-select-option value="{{categoria}}" *ngFor="let categoria of categorias">{{categoria}}</ion-select-option> 
         </ion-select> 
     </ion-item>
 </ion-list>
 
-<ion-card *ngFor="let producto of productos">
-    <img alt={{producto.id}} src={{producto.image}} />
+<ion-card *ngFor="let producto of productos" [routerLink]="['/producto', producto.id]">
+    <img alt={{producto.id}} src={{producto.image}} width="120px"/>
     <ion-card-header>
       <ion-card-title>{{producto.title}}</ion-card-title>
       <ion-card-subtitle>${{producto.price}}</ion-card-subtitle>
@@ -17,3 +18,4 @@
         {{producto.description}}
     </ion-card-content>
   </ion-card>
+</ion-content>

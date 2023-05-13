@@ -10,6 +10,7 @@ import { ProductosComponent } from './productos/productos.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BuscarComponent } from './buscar/buscar.component';
 import { VistaProductoComponent } from './vista-producto/vista-producto.component';
+import { VistaDetalleComponent } from './vista-detalle/vista-detalle.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VistaProductoComponent } from './vista-producto/vista-producto.componen
     ListaAlumnosComponent,
     ProductosComponent,
     BuscarComponent,
-    VistaProductoComponent
+    VistaProductoComponent,
+    VistaDetalleComponent
   ],
   imports: [
     BrowserModule,
