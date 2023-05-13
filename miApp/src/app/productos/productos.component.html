@@ -1,7 +1,7 @@
 <ion-list> 
     <ion-item>
         <ion-select aria-label="Categoria" interface="popover" placeholder="Select fruit"> 
-            <ion-select-option value="{{categoria}}" *ngFor="let categoria of categorias" (ionChange)="filtrarProductoCategorias">{{categoria}}</ion-select-option> 
+            <ion-select-option value="{{categoria}}" *ngFor="let categoria of categorias" (ionChange)="filtrarProductoPorCategorias">{{categoria}}</ion-select-option> 
         </ion-select> 
     </ion-item>
 </ion-list>
