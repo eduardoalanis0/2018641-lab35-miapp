@@ -1,23 +1,28 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
-=======
-import { Component } from '@angular/core';
->>>>>>> Practica9
+import { ConsultasService } from '../consultas.service';
 
 @Component({
   selector: 'app-buscar',
   templateUrl: './buscar.component.html',
   styleUrls: ['./buscar.component.css']
 })
-<<<<<<< HEAD
-export class BuscarComponent implements OnInit {
+export class BuscarComponent implements OnInit{
 
-  constructor() { }
+  constructor (private consultasService: ConsultasService){ }
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
   }
-=======
-export class BuscarComponent {
->>>>>>> Practica9
 
+
+  idProducto: number = 0;
+
+  producto: any = {}
+
+  buscarProducto(){
+    this.consultasService.getProducto(this.idProducto).subscribe (res =>{
+      this.producto = res;
+
+      console.log (this.producto)
+    })
+  }
 }

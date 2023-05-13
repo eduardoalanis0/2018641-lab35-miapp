@@ -1,1 +1,17 @@
-<p>buscar works!</p>
+<div>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="9" size-md="11">
+                <ion-input [(ngModel)]="idProducto" ></ion-input>
+            </ion-col>
+            <ion-col>
+
+                <ion-button size="1" (click)="buscarProducto()">
+                    <ion-icon name="search"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>
+
+{{idProducto}}

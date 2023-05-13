@@ -17,12 +17,16 @@ export class ConsultasService{
 
     }
 
-    getProducto(){ //un producto
+    getCategoria(){ //productos por categoria
 
     }
 
-    getProductorPorCategoria(){ //productos por categoria
+    getProducto(idProducto : number){ //un producto
+
+      return this.http.get('https://fakestoreapi.com/products/' + idProducto)
 
     }
+
+    
   
 }
