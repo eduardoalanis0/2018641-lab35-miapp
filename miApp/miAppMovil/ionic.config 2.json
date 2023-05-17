@@ -1,5 +1,7 @@
 {
   "name": "miAppMovil",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
