@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Preferences } from '@capacitor/preferences';
-import { fileURLToPath } from 'url';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +10,6 @@ import { fileURLToPath } from 'url';
 export class FotoService {
 
   constructor() { }
-
-  public fotos:
 
   public async addNewToGallery() {
     // Take a photo  
@@ -23,7 +20,7 @@ export class FotoService {
   }
 }
 
-  export inteface UserFoto {
+  export interface UserFoto {
     filepath: string;
     webviewPath: string;
   }
