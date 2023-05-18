@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { BuscarComponent } from './buscar/buscar.component';
 import { VistaProductoComponent } from './vista-producto/vista-producto.component';
 import { VistaDetalleComponent } from './vista-detalle/vista-detalle.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { VistaDetalleComponent } from './vista-detalle/vista-detalle.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     IonicModule.forRoot()
   ],
