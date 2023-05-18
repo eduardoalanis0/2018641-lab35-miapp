@@ -1,23 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { ConsultasService } from '../consultas.service';
->>>>>>> Practica9
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
-<<<<<<< HEAD
-export class ProductosComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-=======
 export class ProductosComponent implements OnInit{
 
   constructor(private consultas: ConsultasService) { };
@@ -68,5 +56,4 @@ export class ProductosComponent implements OnInit{
       console.log()
 
     }
->>>>>>> Practica9
 }
