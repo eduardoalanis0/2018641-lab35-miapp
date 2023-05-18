@@ -16,9 +16,9 @@ export class ProductosComponent implements OnInit{
 
   ngOnInit():void {
     this.obtenerProductos();
-    this.obtenerCategorias();
+    /*this.obtenerCategorias();
     this.filtrarProducto();
-    this.filtrarProductoCategorias();
+    this.filtrarProductoCategorias();*/
   }
 
     obtenerProductos(){
@@ -27,9 +27,10 @@ export class ProductosComponent implements OnInit{
         console.log(res);
       })
     }
-   
+   /*
     obtenerCategorias(){
-      this.consultas.getCategorias().subscribe(res => {
+      this.consultas.getCategorias().subscribe((res: any) => {
+        this.categorias = res;
         console.log(res);
       })
     }
@@ -45,7 +46,7 @@ export class ProductosComponent implements OnInit{
         console.log(res);
       })
     }
-
+*/
     categoria : string ="";
 
     filtrarProductoPorCategorias (ev:any){

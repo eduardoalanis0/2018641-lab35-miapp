@@ -6,6 +6,18 @@
     </ion-header>
 
     <ion-content>
-        <app-productos></app-productos>
+        <router-outlet></router-outlet>
+        <ion-tabs>
+            <ion-tab-bar>
+                <ion-tab-button routerLink="inicio">
+                    Inicio
+                    <ion-icon name="home"></ion-icon>
+                </ion-tab-button>
+                <ion-tab-button routerLink="buscar">
+                    Buscar
+                    <ion-icon name="search"></ion-icon>
+                </ion-tab-button>
+            </ion-tab-bar>
+        </ion-tabs>
     </ion-content>
 </ion-app>
