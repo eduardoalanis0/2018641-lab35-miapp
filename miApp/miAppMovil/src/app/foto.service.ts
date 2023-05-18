@@ -16,7 +16,7 @@ export class FotoService {
     private platform: Platform
   ) { }
 
-  public foto: UserFoto[] = [];
+  public fotos: UserFoto[] = [];
 
   public async addNewToGallery() {
     // Take a photo  
@@ -27,7 +27,29 @@ export class FotoService {
     });
 
       const fotoGuardada = await this.savePicture(capturedPhoto);
+      this.fotos.unshift(fotoGuardada);
   }
+
+   public async readAsBase64(photo: Photo) {
+    if (this.platform.is('hybrid')) {
+      // Read the file into base64 format      
+      const file = await Filesystem.readFile({
+        path: photo.path || ''      });
+      return file.data;
+    }
+    // Busca foto, lee como blob y cambia a base64    
+    const response = await fetch(photo.webPath!);
+    const blob = await response.blob();
+    return await this.convertBlobToBase64(blob) as string;
+  }
+  private convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onload = () => {
+        resolve(reader.result);
+    };
+    reader.readAsDataURL(blob);
+  });
 
   private async savePicture(photo: Photo) {
     //Convierte foto a Base 64    
@@ -52,31 +74,10 @@ export class FotoService {
         webviewPath: photo.webPath      };
     }
   }
-
-  public async readAsBase64(photo: Photo) {
-    if (this.platform.is('hybrid')) {
-      // Read the file into base64 format      
-      const file = await Filesystem.readFile({
-        path: photo.path || ''      });
-      return file.data;
-    }
-    // Busca foto, lee como blob y cambia a base64    
-    const response = await fetch(photo.webPath!);
-    const blob = await response.blob();
-    return await this.convertBlobToBase64(blob) as string;
-  }
-  private convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = reject;
-    reader.onload = () => {
-        resolve(reader.result);
-    };
-    reader.readAsDataURL(blob);
-  });
-
+  
 }
 
   export interface UserFoto {
     filepath: string;
-    webviewPath: string;
+    webviewPath?: string;
   }

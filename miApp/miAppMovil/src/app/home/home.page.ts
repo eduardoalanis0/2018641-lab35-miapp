@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { FotoService } from '../foto.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,10 +10,12 @@ import { FotoService } from '../foto.service';
 export class HomePage {
 
   constructor(
-    private foto : FotoService
+    private fotoService : FotoService
   ) {}
 
+    fotos = this.fotoService.fotos;
+
   tomarFoto(){
-    this.foto.addNewToGallery();
+    this.fotoService.addNewToGallery();
   }
 }

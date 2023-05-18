@@ -1,4 +1,4 @@
-<ion-app>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
@@ -14,9 +14,23 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
+    <ion-fab-button (click)="tomarFoto()">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let foto of fotos; index as position"> 
+        <ion-img [src]="foto.webviewPath"></ion-img>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
   <div id="container">
-    <ion-button (click)="tomarFoto()">Tomar foto</ion-button>
 
   </div>
 </ion-content>
-</ion-app>
+
